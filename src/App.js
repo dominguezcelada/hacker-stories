@@ -29,7 +29,7 @@ function App() {
       <input id="search" type="text" />
       <hr />
       { list.map(item => {
-        return <div>
+        return <div key={item.objectID}>
           {item.title}
         </div>
       })}
