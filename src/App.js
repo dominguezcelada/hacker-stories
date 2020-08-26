@@ -2,16 +2,13 @@ import React from 'react';
 
 import './App.css';
 
-const { greeting, title } = {
-  greeting: 'Hey',
-  title: 'React',
-};
+const getTitle = (title) => title;
 
 function App() {
   return (
     <div>
       <h1>
-        {greeting} {title}
+        {getTitle('Amo niño')}
       </h1>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />
