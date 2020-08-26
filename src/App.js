@@ -44,13 +44,17 @@ function App() {
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />
       <hr />
-      { list.map(item => {
-        return <div key={item.objectID}>
-          {item.title}
-        </div>
-      })}
+      {
+        list.map(item => <List title={item.title} key={item.objectID} />)
+      }
     </div>
   );
+}
+
+function List(item) {
+  return <div>
+    {item.title}
+  </div>
 }
 
 export default App;
