@@ -1,52 +1,49 @@
 import React from 'react';
 
-import './App.css';
-
-const list = [
+const goatList = [
   {
-    title: 'React',
-    url: 'https://reactjs.org/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
+    name: 'Michael Jordan',
+    url: 'https://www.basketball-reference.com/players/j/jordami01.html',
+    Position: 'Small Forward',
+    College: 'UNC',
+    id: 0,
   },
   {
-    title: 'Vue',
-    url: 'https://vuejs.org/',
-    author: 'Evan You',
-    num_comments: 3,
-    points: 4,
-    objectID: 1,
+    name: 'Kobe Bryant',
+    url: 'https://www.basketball-reference.com/players/b/bryanko01.html',
+    Position: 'Small Forward',
+    College: 'Lower Merion High School',
+    id: 1,
   },
   {
-    title: 'Svelte',
-    url: 'https://svelte.dev/',
-    author: 'Rich Harris',
-    num_comments: 3,
-    points: 4,
-    objectID: 2,
+    name: 'Kevin Durant',
+    url: 'https://www.basketball-reference.com/players/d/duranke01.html',
+    Position: 'Power Forward',
+    College: 'Texas',
+    id: 2,
   },
   {
-    title: 'Redux',
-    url: 'https://redux.js.org/',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 3,
+    name: 'Lebron James',
+    url: 'https://www.basketball-reference.com/players/j/jamesle01.html',
+    Position: 'Power Forward',
+    College: 'St.Vincent-St. Mary',
+    id: 3,
   },
 ];
 
 function App() {
   return (
     <div>
-      <h1>My Hacker Stories</h1>
+      <h1>NBA GOAT RACE</h1>
       <label htmlFor="search">Search: </label>
       <input id="search" type="text" />
       <hr />
-      { list.map(item => {
-        return <div key={item.objectID}>
-          {item.title}
+      { goatList.map(player => {
+        return <div key={player.id}>
+          <span>{player.name}</span>
+          <span>{player.Position}</span>
+          <span>{player.College}</span>
+          <span><a href={player.url}>STATS</a></span>
         </div>
       })}
     </div>
